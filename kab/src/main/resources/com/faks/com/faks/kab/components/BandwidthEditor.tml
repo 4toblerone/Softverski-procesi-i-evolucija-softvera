@@ -1,0 +1,27 @@
+<t:container 
+xmlns:p="tapestry:parameter"
+xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+
+	<t:form t:id="reviewForm" t:zone="prop:zone">
+	
+	<t:unless test="isBandWidthOfferNull">
+		${bwo.nazivPaketa}
+		<t:label for="nazivPaketa"/>
+		<input t:type="TextField" t:id="nazivPaketa" value="bwo.nazivPaketa"/>
+		<t:label for="brzina"  > </t:label>
+		<input t:type="TextField" t:id="brzina" value="bwo.brzina"/>
+		<t:label for="opisPaketa"  ></t:label>
+		<input t:type="TextField" t:id="opisPaketa" value="bwo.opisPaketa"/>
+		<t:label for="cenaPaketa"/>
+		<input t:type="TextField"  t:id="cenaPaketa" value="bwo.cenaPaketa"/>
+		<br/>
+		<br/>
+		
+		<t:eventlink t:id="delete" id="delete"  t:zone="prop:zone">Obrisi</t:eventlink>
+		<t:submit t:id="update" id="update" value="Izmeni"/>
+	</t:unless>
+	
+	</t:form>
+
+
+</t:container>

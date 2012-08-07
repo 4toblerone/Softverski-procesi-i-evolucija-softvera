@@ -1,0 +1,22 @@
+<html t:type="layout" title="com.faks.kab Index" 
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+
+<!--Vrsta kvara: pa ovde ide check box, ne mora da upisuje podatke jer ce izvaditi iz sesije koji je korisnik u pitanju
+
+Zone deo koji ce da se updateuje s vremena na vreme i da pokazuje koji korisnik trenutno na listi cekanja
+-->
+<t:form t:id="izborkvara">
+
+	<t:loop source="kvarovi" value="kvar">
+	<input type="checkbox" value="${kvar}" name="proba" />
+	</t:loop>
+	<br/>
+	<br/>
+	
+	
+	<input t:type="submit" t:id="submit" value="Prijavi kvar"/> 
+</t:form>
+	
+	
+	
+</html>

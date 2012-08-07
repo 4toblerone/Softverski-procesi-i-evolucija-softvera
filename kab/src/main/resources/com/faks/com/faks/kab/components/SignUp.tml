@@ -1,0 +1,12 @@
+<container xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+     
+      <t:form t:id="signupform">
+      	<t:label for="firstname"/>
+      	<input t:type="TextField" t:id="firstname" t:validate="required"/>
+      	<input t:type="TextField" t:id="lastname" t:validate="required"/>
+      	<input type="submit" value="Sign Up"/>
+      </t:form>
+           
+</container>

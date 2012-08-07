@@ -1,0 +1,31 @@
+<html t:type="layout" title="com.faks.kab Index" t:sidebarTitle="Current Time"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+	<!-- Most of the page content, including <head>, <body>, etc. tags, comes 
+		from Layout.tml -->
+
+	<p>${message:greeting}</p>
+
+
+	<t:zone t:id="loginZone" id="zone">
+		<div t:type="SignIn" t:id="singin" zone="zone" />
+	</t:zone>
+
+	<t:block t:id="loginblock">
+		<div t:type="SignUp" t:id="signup" />
+	</t:block>
+
+
+	<p:sidebar>
+		<p>
+			Just to prove this is live:
+        </p>
+		<p>The current time is: ${currentTime}.</p>
+
+		<p>
+			[
+			<t:pagelink page="Index">refresh</t:pagelink>
+			]
+		</p>
+	</p:sidebar>
+
+</html>

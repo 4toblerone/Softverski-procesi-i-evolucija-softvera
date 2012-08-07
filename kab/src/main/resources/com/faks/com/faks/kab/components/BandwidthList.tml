@@ -1,0 +1,16 @@
+<t:container 
+xmlns:p="tapestry:parameter"
+xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+	<div id="bandwidthList" >
+		<table t:type="grid" t:id="list" t:source="bwolist" t:row="bwo" t:zone="prop:zone" 
+		t:exclude="paketID,nazivPaketa,cenaPaketa, opisPaketa,brzina" t:add="naziv" >
+			<p:nazivCell>
+				<a t:type="eventLink" t:event="selected" t:context="bwo.paketID" t:zone="prop:zone" href='#'>
+					${bwo.nazivPaketa},${bwo.opisPaketa}
+				</a>
+			</p:nazivCell>
+			${bwo.nazivPaketa}
+		</table>
+	</div>
+
+</t:container>

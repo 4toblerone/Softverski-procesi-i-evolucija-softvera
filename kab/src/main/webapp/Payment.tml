@@ -1,0 +1,42 @@
+<html t:type="layout" title="com.faks.kab Index"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+
+	Ovo ne sme da bude vidljivo korisniku
+
+	Autocomplete text filed koje trazi
+	korisnika po imenu ili adreesi, ili po imenu,
+	adresi
+
+	prikaze zatim u
+	tabeli listu dugovanja. Zaposleni oznaci za koja dugovanja je
+	korisnik
+	platio i obrise ih iz tabele
+
+
+
+	<t:zone t:id="tblZone" id="tblZone">
+
+		<t:form t:id="pretragaForm" zone="tblZone">
+			<t:textfield t:value="name" t:id="name" t:mixins="jquery/Autocomplete"
+				size="65" />
+			<input t:type="submit" t:id="submit" value="Izlistaj sva dugovanja"/>		
+		</t:form>
+
+	</t:zone>
+
+	<t:zone t:id="tblZone2" id="tblZone2">
+		<t:form t:id="tabelaForma" zone ="tblZone2">
+			<table t:type="grid" t:source="dugovanja" t:add="izmirio">
+				<p:izmirioCell>
+					<input t:type="checkbox" t:id="obrisi" value="obrisi" />
+				</p:izmirioCell>
+			</table>
+			<input type="submit"  value="Izmiri dugovanja"/>
+		</t:form>
+
+	</t:zone>
+
+
+
+
+</html>

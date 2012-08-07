@@ -1,0 +1,42 @@
+<html t:type="layout" title="com.faks.kab Index" t:sidebarTitle="Current Time"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+
+<t:form t:id="addUser">
+	Ime:
+	<input t:type="TextField" t:id="name" />
+	<br/>
+	Prezime:
+	<input t:type="TextField" t:id="surname" />
+	<br/>
+	JMBG:
+	<input t:type="TextField" t:id="JMBG" />
+	<br/>
+	Ulica:
+	<input t:type="TextField" t:id="streetName" />
+	<br/>
+	Grad:
+	<t:select t:id="select" model="ptt_nazivgrada" value="pttGrada" ></t:select>
+	<br/>
+	Paket:
+	<t:select t:id="selectpaket" model="id_naz_brz_cena" value="paketID"></t:select>
+	<br/>
+	<br/>
+	<!-- 
+	<table t:type="grid" t:id="list" t:source="listaPaketa" t:row="paket" inplace="true"
+		t:exclude="paketID,nazivPaketa,cenaPaketa, opisPaketa,brzina" t:add="Paketi" >
+			<p:paketiCell>
+				<a t:type="eventLink" t:event="selected" t:context="paket.paketID"  href='#'>
+					${paket.nazivPaketa}, ${paket.brzina}Mb/s, ${paket.cenaPaketa} din
+				</a>
+			</p:paketiCell>
+			
+		</table>-->
+
+	<input t:type="submit" t:id="submit" value="Dodaj korisnika"/>
+	
+
+</t:form>
+
+
+
+</html>

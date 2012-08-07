@@ -1,0 +1,34 @@
+<html t:type="layout" title="com.faks.kab Index"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+
+	
+	<table id="bwoeditor">
+		<tr>
+			 <td id="bwolistCell">
+			<t:zone t:id="listZone" >
+				 <t:bandwidthlist t:id="list" zone="listZone"/>
+			</t:zone>
+			</td>
+			
+			<td id="editorCell">
+				<t:zone t:id="editorZone" >
+					<t:bandwidtheditor t:id="editor"  paketID ="paketID" zone="editorZone"/>
+				</t:zone>
+				
+			</td>
+		</tr>
+
+	</table>
+
+<div id="createBwo">
+	<a t:type="eventlink" t:event="create" zone="editorZone">Dodaj novi paket</a>
+</div>
+<!--<form t:type="beaneditform" object="bwopackage"></form>--> 
+
+
+<t:block t:id="block">
+<t:beaneditform t:id="bwobeanform" object="bwopackage" zone="editorZone">
+</t:beaneditform>
+</t:block>
+
+</html>
